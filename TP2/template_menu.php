@@ -17,11 +17,11 @@ function renderMenuToHTML($currentPageId) {
     );
     echo "
     <nav class=\"menu\">
-        <ul>";
+        <ul>"."\n";
     foreach($mymenu as $pageId => $pageParameters) {
             echo "<li><a href=".$pageId.".php>".$pageParameters."</a></li>"."\n";
         }
-    echo "
+    echo "\n"."
         </ul>
     </nav>";
         // ...    
