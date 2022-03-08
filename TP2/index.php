@@ -1,19 +1,13 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Ma première page HTML</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
-    </head>
-
-        <body>
-            <img src="/Images/Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe">
+<?php
+require_once('template_header.php');
+?>
+            <img src="Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe">
             <h1>Titre de niveau 1</h1>
             <nav class="menu">
                 <ul>
-                <li class="t1"><a class="t1" href="index.html"><strong>Accueil</strong></a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
+                <li class="t1"><a class="t1" href="index.php"><strong>Accueil</strong></a></li>
+                <li><a href="cv.php">CV</a></li>
+                <li><a href="hobbies.php">Hobbies</a></li>
                 </ul>
                 </nav>
             
@@ -30,6 +24,8 @@
                 <li> Chien : Nanouck (<strong>4 ans et 8 mois</strong>), Nicki (<strong>4 ans et 4 mois</strong>)</li>
                 <li> Poisson : Pas à ma connaissance... </li>
             </ol>
-        </body>
-    </html>
+
+<?php
+require_once('template_footer.php');
+?>
     

@@ -1,16 +1,11 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Mon CV</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="cv.css">
-    </head>
-    <body>
+<?php
+require_once('template_header.php');
+?>
     <nav class="menu">
         <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li class="t1"><a class="t1" href="cv.html"><strong>CV</strong></a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="index.php">Accueil</a></li>
+        <li class="t1"><a class="t1" href="cv.php"><strong>CV</strong></a></li>
+        <li><a href="hobbies.php">Hobbies</a></li>
         </ul>
     </nav>
     <p> Voici mon CV en français.
@@ -96,5 +91,7 @@
             </tfoot>
         </table>
     </article>
-    </body>
-</html>
+
+<?php
+require_once('template_footer.php');
+?>
