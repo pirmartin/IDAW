@@ -80,9 +80,42 @@
     echo $value."\n";
     }
     foreach($tab as $key => $value){
-    echo $key." : ".$value."\n";
+        echo $key." : ".$value."\n";
     }
 
+    $personne = array(
+        'prenom' => 'John',
+        'nom' => 'Doe',
+        'age' => 20
+        );
+    // Affichages équivalents :
+    echo "M. ".$personne['prenom']."\n";
+    echo "M. {$personne['nom']}\n";
+    
+    $t = array(5 => 43, 32, 56, "b" => 12);
+    $u = array(5 => 43, 6 => 32, 7 => 56, "b" => 12);
+    // $t et $u sont identiques
+    // Affichage d’un élément
+    echo $u["b"]."\n";
+    foreach($u as $key => $value){
+        echo $key." : ".$value."\n";
+    }
+
+    $matrice = array(
+        array( 1, 18, 6 ),
+        array( -1, 1, 8 ),
+        array( 13, 18, 3 )
+        );
+    echo $matrice[1][2]; //Affiche 8
+    echo "\n";
+    $personnes = array(
+    array( 'prenom' => 'John',
+    'nom' => 'Doe', 'age' => 20 ),
+    array( 'prenom' => 'Luke',
+    'nom' => 'Skywalker', 'age' => 17 ),
+    );
+    echo $personnes[0]['prenom']; //Affiche John
+    
     ?>
 
 </body>
