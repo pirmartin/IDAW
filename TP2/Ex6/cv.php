@@ -1,10 +1,3 @@
-<?php
-require_once('template_header.php');
-?>
-<?php
-require_once('template_menu.php');
-?>
-
 <p> Voici mon CV en français.
     <br>
     <embed src="Pierre MARTIN CV Français.pdf" width='800' height='1200' type='application/pdf'/>
@@ -89,6 +82,3 @@ require_once('template_menu.php');
     </table>
 </article>
 
-<?php
-require_once('template_footer.php');
-?>

@@ -2,7 +2,7 @@
     <ul>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="cv.php">Cv</a></li>
-        <li><a href="hobbies.php">Mes Projets</a></li>
+        <li><a href="hobbies.php">Mes Hobbies</a></li>
     </ul>
 </nav> -->
 
@@ -19,11 +19,13 @@ function renderMenuToHTML($currentPageId) {
     <nav class=\"menu\">
         <ul>"."\n";
     foreach($mymenu as $pageId => $pageParameters) {
-            echo "<li><a href=".$pageId.".php>".$pageParameters."</a></li>"."\n";
+        if($currentPageId==$pageId)
+            echo "<li><a class=\"t1\" href=".$pageId.".php>".$pageParameters[0]."</a></li>"."\n";
+        else
+            echo "<li><a href=".$pageId.".php>".$pageParameters[0]."</a></li>"."\n";
         }
     echo "\n"."
         </ul>
-    </nav>";
-        // ...    
+    </nav>"; 
 }
 ?>

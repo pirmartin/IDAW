@@ -2,9 +2,10 @@
 require_once('template_header.php');
 ?>
     <h1>MES HOBBIES !</h1>
-    
+
     <?php
     require_once('template_menu.php');
+    renderMenuToHTML('hobbies');
     ?>
 
     <div class="conteneur-flexible">Mes Hobbies sont : 

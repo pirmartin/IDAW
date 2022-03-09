@@ -1,15 +1,6 @@
-<?php
-require_once('template_header.php');
-?>
-
 <img src="Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe">
 
 <h1>Titre de niveau 1</h1>
-
-<?php
-require_once('template_menu.php');
-renderMenuToHTML('index');
-?>
 
 <p>Mon premier paragraphe écrit en HTML
     <br>
@@ -24,8 +15,3 @@ renderMenuToHTML('index');
     <li> Chien : Nanouck (<strong>4 ans et 8 mois</strong>), Nicki (<strong>4 ans et 4 mois</strong>)</li>
     <li> Poisson : Pas à ma connaissance... </li>
 </ol>
-
-<?php
-require_once('template_footer.php');
-?>
-    
