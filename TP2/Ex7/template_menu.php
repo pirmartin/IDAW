@@ -29,7 +29,7 @@ function renderMenuToHTML($currentPageId,$currentLang) {
             <ul>"."\n";
         foreach($mymenu as $pageId => $pageParameters) {
             if($currentPageId==$pageId)
-                echo "<li><a class=\"t1\" href=\"Fr\index.php?page=".$pageId."&lang=fr\">".$pageParameters[0]."</a></li>"."\n";
+                echo "<li><a class=\"t1\" href=\"index.php?page=".$pageId."&lang=fr\">".$pageParameters[0]."</a></li>"."\n";
             else
                 echo "<li><a href=\"index.php?page=".$pageId."&lang=fr\">".$pageParameters[0]."</a></li>"."\n";
         }
@@ -59,7 +59,7 @@ function renderMenuToHTML($currentPageId,$currentLang) {
             <ul>"."\n";
         foreach($mymenu as $pageId => $pageParameters) {
             if($currentPageId==$pageId)
-                echo "<li><a class=\"t1\" href=\"En\index.php?page=".$pageId."&lang=en\">".$pageParameters[0]."</a></li>"."\n";
+                echo "<li><a class=\"t1\" href=\"index.php?page=".$pageId."&lang=en\">".$pageParameters[0]."</a></li>"."\n";
             else
                 echo "<li><a href=\"index.php?page=".$pageId."&lang=en\">".$pageParameters[0]."</a></li>"."\n";
         }
