@@ -1,0 +1,45 @@
+h1{
+    color : green;
+    font-size : 24px;
+}
+
+p{
+    background-color: blue;
+    color : white;
+    display: flexbox;
+    
+}
+table{
+    border-collapse: collapse;
+}
+thead{
+    border : transparent;
+    background-color: orchid;
+    padding : 15px ;
+}
+td{
+    border: 2px solid green;
+    /* border : 5px black; */
+}
+tbody{
+    border : 3px solid red;
+    font-size : 18px;
+    background-color: orchid;
+}
+tfoot{
+    background-color: black;
+    color : white;
+    font-size : 20px;
+    border : 5px solid yellow;
+}
+body{
+    margin : 100px;
+    background-image: url("Logo_IMT_Nord_Europe.png");
+}
+nav{
+    color: black;
+    font-size : 20px;
+}
+.t1{
+    color : red;
+}
