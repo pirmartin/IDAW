@@ -16,7 +16,7 @@
 </header>
 
 <?php
-    renderMenuToHTML($currentPageId);
+    renderMenuToHTML($currentPageId,$currentLang);
 ?>
 
 <section class="corps">
