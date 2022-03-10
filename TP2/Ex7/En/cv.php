@@ -1,59 +1,59 @@
-<p> Voici mon CV en français.
+<p> Here is my Curriculum Vitae in English.
     <br>
     <embed src="Pierre MARTIN CV Français.pdf" width='800' height='1200' type='application/pdf'/>
 </p>
 <article>
-    Mes notes au bac scientifique 2018 :
+    My marks in the scientific Baccalauréat in 2018 are :
     <br><br>
     <table>
         <tr>
-            <th>Nom de l'étudiant</th>
-            <th>Prénom de l'étudiant</th>
-            <th>Année scolaire</th>
-            <th>Type de Baccalauréat</th>
+            <th>Surname of student</th>
+            <th>Fist name of student</th>
+            <th>School Year</th>
+            <th>Type of Baccalauréat</th>
         </tr>
         <tr>
             <td>MARTIN</td>
             <td>Pierre</td>
             <td>2018</td>
-            <td>Scientifique</td>
+            <td>Scientific</td>
         </tr>
     </table>
     <br><br>
     <table>
         <thead>
             <tr>
-                <th>Matière</th>
-                <th>Note Obtenue</th>
+                <th>Subject</th>
+                <th>Mark got</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Mathématiques</td>
+                <td>Mathematics</td>
                 <td>19</td>
             </tr>
             <tr>
-                <td>Physique</td>
+                <td>Physics</td>
                 <td>19</td>
             </tr>
             <tr>
-                <td>SVT</td>
+                <td>Biology</td>
                 <td>15</td>
             </tr>
             <tr>
-                <td>Français</td>
+                <td>French</td>
                 <td>17</td>
             </tr>
             <tr>
-                <td>Anglais</td>
+                <td>English</td>
                 <td>16</td>
             </tr>
             <tr>
-                <td>Allemand</td>
+                <td>German</td>
                 <td>16</td>
             </tr>
             <tr>
-                <td>Histoire-Géographie</td>
+                <td>History and Geography</td>
                 <td>18</td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@
                 <td>17</td>
             </tr>
             <tr>
-                <td>Philosophie</td>
+                <td>Philosophy</td>
                 <td>10</td>
             </tr>
             <tr>
@@ -69,13 +69,13 @@
                 <td>17</td>
             </tr>
             <tr>
-                <td>Grec</td>
+                <td>Greek</td>
                 <td>20</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td>Moyenne générale</td>
+                <td>Overall average</td>
                 <td>18,14</td>
             </tr>
         </tfoot>

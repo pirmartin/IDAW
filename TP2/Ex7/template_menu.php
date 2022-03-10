@@ -8,66 +8,35 @@
 
 <?php
 function renderMenuToHTML($currentPageId,$currentLang) {
-    if ($currentLang=='fr'){
         // un tableau qui définit la structure du site
         $mymenu = array(
             // idPage titre
-            'accueil' => array( 'Accueil' ),
-            'cv' => array( 'Cv' ),
-            'hobbies' => array('Mes Hobbies'),
-            'contact' => array('Mes coordonnées')
-        );
-        $mymenu2 = array(
-            // idPage titre
-            'accueil' => array( 'Home Page'),
-            'cv' => array( 'CV' ),
-            'hobbies' => array('My Hobbies'),
-            'contact' => array('My contact information')
+            'accueil' => array( 'fr' => 'Accueil', 'en' => 'Home Page' ),
+            'cv' => array( 'fr'=>'Cv','en'=>'CV' ),
+            'hobbies' => array('fr'=>'Mes Hobbies','en'=>'My Hobbies'),
+            'contact' => array('fr'=>'Mes coordonnées','en'=> 'My contact information'),
+            'projets' => array('fr' => 'Mes projets', 'en' => 'My Projects' )
         );
         echo "
         <nav class=\"menu\">
             <ul>"."\n";
         foreach($mymenu as $pageId => $pageParameters) {
-            if($currentPageId==$pageId)
-                echo "<li><a class=\"t1\" href=\"index.php?page=".$pageId."&lang=fr\">".$pageParameters[0]."</a></li>"."\n";
-            else
-                echo "<li><a href=\"index.php?page=".$pageId."&lang=fr\">".$pageParameters[0]."</a></li>"."\n";
+            echo "<li><a ";
+            if($currentPageId==$pageId){
+                echo "class=\"t1\" ";
+            }
+            echo "href=\"index.php?page=".$pageId."&lang=".$currentLang."\">".$pageParameters[$currentLang]."</a></li>"."\n";
         }
-        foreach($mymenu2 as $pageId => $pageParameters) {
-            if($currentPageId==$pageId)
-                echo "<li><a href=\"index.php?page=".$currentPageId."&lang=en\">Towards English Version : ".$pageParameters[0]."</a></li>"."\n";  
-        }
-    }
-   elseif ($currentLang=='en'){
-       // un tableau qui définit la structure du site
-        $mymenu = array(
-            // idPage titre
-            'accueil' => array( 'Home Page'),
-            'cv' => array( 'CV' ),
-            'hobbies' => array('My Hobbies'),
-            'contact' => array('My contact information')
-        );
-        $mymenu2 = array(
-            // idPage titre
-            'accueil' => array( 'Accueil' ),
-            'cv' => array( 'Cv' ),
-            'hobbies' => array('Mes Hobbies'),
-            'contact' => array('Mes coordonnées')
-        );
-        echo "
-        <nav class=\"menu\">
-            <ul>"."\n";
         foreach($mymenu as $pageId => $pageParameters) {
-            if($currentPageId==$pageId)
-                echo "<li><a class=\"t1\" href=\"index.php?page=".$pageId."&lang=en\">".$pageParameters[0]."</a></li>"."\n";
-            else
-                echo "<li><a href=\"index.php?page=".$pageId."&lang=en\">".$pageParameters[0]."</a></li>"."\n";
+            if($currentPageId==$pageId){
+                if($currentLang=='fr'){
+                    echo "<li><a href=\"index.php?page=".$currentPageId."&lang=en\">Towards English Version : ".$pageParameters['en']."</a></li>"."\n"; 
+                }
+               elseif($currentLang=='en'){
+                    echo "<li><a href=\"index.php?page=".$currentPageId."&lang=fr\">Vers la version française : ".$pageParameters['fr']."</a></li>"."\n"; 
+               }
+            } 
         }
-        foreach($mymenu2 as $pageId => $pageParameters) {
-            if($currentPageId==$pageId)
-                echo "<li><a href=\"index.php?page=".$currentPageId."&lang=fr\">Vers la version française : ".$pageParameters[0]."</a></li>"."\n";  
-        }
-   }
    echo "\n"."
    </ul>
 </nav>"; 
