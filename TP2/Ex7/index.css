@@ -48,11 +48,18 @@ footer,.t5{
 }
 .menu{
     color:gray;
+    width : 350px;
+    background-color: rgb(125, 125, 180);
+    padding : 2px;
+    border : 5px solid black;
 }
-#t4{
-    object-position: 20px ;
-    width : 50px;
+.t4{
+    display : block;
+    position : absolute;
+    top : 10px;
+    right : 20px;
 }
+
 h3{
     font-size:18px;
     font-style : italic;
@@ -61,4 +68,15 @@ h3{
 }
 .élément-intérieur{
     text-decoration: underline;
+}
+img{
+    height:100px;
+    width:140px;
+}
+.c2{
+    width : 180px;
+    float : left;
+}
+.clear{
+    clear:left;
 }

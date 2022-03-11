@@ -1,7 +1,7 @@
 <?php
     require_once("template_header.php");
 ?>
-<div id="t4"> <img src="Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe"> </div>
+<div class="t4"> <img src="Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe"> </div>
 <?php
     require_once("template_menu.php");
     $currentPageId = 'accueil';
@@ -17,6 +17,7 @@
 <header class="bandeau_haut">
     <h1 class="titre">Pierre MARTIN</h1>
 </header>
+<br><br>
 
 <?php
     renderMenuToHTML($currentPageId,$currentLang);
