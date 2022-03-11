@@ -9,7 +9,7 @@
             <li> Tennis <br><br> <img class="c4" src="logo tennis.JPG"> </li> 
         </div>
         <div class="c2"> 
-            <li> Jeux Vidéos <br><br> <img class="c5" src="jeu vidéo logo.png"> </li> 
+            <li> Jeux Vidéos <br><br> <img class="c5" src="jeu vidéo logo.png"> </li>
         </div>
         <div class="c2"> 
             <li> Echecs <br><br> <img class="c6" src="echecs.JPG"> </li> 
