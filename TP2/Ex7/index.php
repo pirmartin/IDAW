@@ -1,7 +1,7 @@
 <?php
     require_once("template_header.php");
 ?>
-<div class="t4"> <img src="Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe"> </div>
+<div class="t4"> <img class="c1" src="Logo_IMT_Nord_Europe.png" alt="Logo de l'IMT Nord-Europe"> </div>
 <?php
     require_once("template_menu.php");
     $currentPageId = 'accueil';

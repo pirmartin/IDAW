@@ -1,9 +1,9 @@
 <h2> Presentation of my CV and my Bachelor's marks</h2>
 
 <div class="t2">
-    <p> In the one hand, here is my French CV for my M1 internship.
+    <p> In the one hand, here is my English CV for my M1 internship.
         <br><br>
-        <embed src="Pierre MARTIN CV Français.pdf" width='800' height='1200' type='application/pdf'/>
+        <embed src="PIERRE MARTIN English CVv2.pdf" width='800' height='1200' type='application/pdf'/>
     </p>
 </div>
 

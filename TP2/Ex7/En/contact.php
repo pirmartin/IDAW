@@ -2,8 +2,8 @@
 <p>
     My contact information are : <br>
     <ul>
-        <li>Live with his parents in Pas-de-Calais, near Arras at Anzin Saint-Aubin</li>
-        <li>Have also a flat in Douai in the North with his brother</li>
+        <li>Live with my parents in Pas-de-Calais, near Arras at Anzin Saint-Aubin</li>
+        <li>Have also a flat in Douai in the North with my brother</li>
         <li>My phone number starts by 06 95 and you have to guess the rest :)</li>
         <li>Email addresses :
             <ul>
