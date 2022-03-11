@@ -1,4 +1,4 @@
-<h1>MES HOBBIES !</h1>
+<h2>MES HOBBIES !</h2>
 
 <div class="conteneur-flexible">Mes Hobbies sont : 
     <ul>

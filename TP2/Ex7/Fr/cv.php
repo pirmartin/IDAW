@@ -1,9 +1,14 @@
-<p> Voici mon CV en français.
-    <br>
-    <embed src="Pierre MARTIN CV Français.pdf" width='800' height='1200' type='application/pdf'/>
-</p>
+<h2> Présentation du CV et des notes de BAC</h2>
+
+<div class="t2">
+    <p> D'une part, voici mon CV en français pour mon stage de M1.
+        <br><br>
+        <embed src="Pierre MARTIN CV Français.pdf" width='800' height='1200' type='application/pdf'/>
+    </p>
+</div>
+
 <article>
-    Mes notes au bac scientifique 2018 :
+    <div class="t3">D'autre part, ci-dessous, vous pourrez retrouver les notes que j'ai obtenues au bac scientifique de 2018 :</div>
     <br><br>
     <table>
         <tr>
@@ -21,63 +26,57 @@
     </table>
     <br><br>
     <table>
-        <thead>
-            <tr>
-                <th>Matière</th>
-                <th>Note Obtenue</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Mathématiques</td>
-                <td>19</td>
-            </tr>
-            <tr>
-                <td>Physique</td>
-                <td>19</td>
-            </tr>
-            <tr>
-                <td>SVT</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>Français</td>
-                <td>17</td>
-            </tr>
-            <tr>
-                <td>Anglais</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>Allemand</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>Histoire-Géographie</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>Sport</td>
-                <td>17</td>
-            </tr>
-            <tr>
-                <td>Philosophie</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Latin</td>
-                <td>17</td>
-            </tr>
-            <tr>
-                <td>Grec</td>
-                <td>20</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>Moyenne générale</td>
-                <td>18,14</td>
-            </tr>
-        </tfoot>
+        <tr>
+            <th>Matière</th>
+            <th>Note Obtenue</th>
+        </tr>
+        <tr>
+            <td>Mathématiques</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Physique</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>SVT</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Français</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Anglais</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Allemand</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Histoire-Géographie</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Sport</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Philosophie</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Latin</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Grec</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Moyenne générale</td>
+            <td>18,14</td>
+        </tr>
     </table>
 </article>

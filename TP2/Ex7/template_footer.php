@@ -1,6 +1,6 @@
 </body>
-    
+    <br><br>
     <footer>
-        Ceci est mon pied de page factorisé...
+        Merci à tous d'avoir lu cette page Web, j'espère qu'elle vous a plu, et à très bientôt !!
     </footer>
 </html>

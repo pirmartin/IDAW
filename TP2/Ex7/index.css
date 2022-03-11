@@ -1,14 +1,64 @@
+body{
+    margin: 20px;
+    background: url(vert.jpg);
+    background-size: cover;
+}
 h1{
-    font-size: 20px;
-    color: black;
+    font-size: 24px;
+    color: white;
+    width : 25%;
+    margin: 0 auto;
+    text-decoration: underline;
 }
 p{
     font-size : 16px;
-    color : rgb(176, 236, 86);
-}
-body{
-    background-color : blue;
+    color : black;
 }
 .t1{
     color: red;
+    font-weight : bold;
+    font-style: italic;
+    font-size : 20px;
+}
+body,.t1,p,h1{
+    font-family :'Franklin Gothic Medium';
+}
+h2{
+    font-size:22px;
+    color :white;
+    text-decoration: underline;
+}
+.t2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+table{
+    border-collapse: collapse;
+}
+td,th{
+    border: 3px solid black;
+    background-color: rgb(124, 208, 216);
+}
+.t3,footer{
+    text-decoration: underline;
+}
+footer,.t5{
+    text-align: center;
+}
+.menu{
+    color:gray;
+}
+#t4{
+    object-position: 20px ;
+    width : 50px;
+}
+h3{
+    font-size:18px;
+    font-style : italic;
+    color :gray;
+    text-decoration: underline;
+}
+.élément-intérieur{
+    text-decoration: underline;
 }
