@@ -13,7 +13,7 @@
             $password = '';
             
             //On établit la connexion
-            $conn = mysqli_connect($servername, $username, $password);
+            $conn = mysqli_connect($servername, $username, $password, 'tp3_idaw');
             
             //On vérifie la connexion
             if(!$conn){
@@ -22,7 +22,22 @@
             echo 'Connexion réussie <br>';
 
             $result = $conn->query("SELECT * FROM user");
-            printf("Select returned %d rows.\n", $result);
+            print_r($result);
+
+            echo "<table>
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Password</th>";
+            while ($row = $result->fetch_assoc()) {
+                echo "
+                        <tr>
+                            <td>".$row['ID']."</td>
+                            <td>".$row['Login']."</td>
+                            <td>".$row['Password']."</td>
+                        </tr>"
+                      ;  
+            }
+            echo "</table>";
         ?>
     </body>
 </html>
