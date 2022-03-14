@@ -8,9 +8,9 @@
     <body>
         <h1>Bases de données MySQL</h1>  
         <?php
-            $servername = 'eden.imt-nord-europe.fr/med/index.php';
-            $username = 'pierre.martin';
-            $password = 'Ae2lp*lj2geA';
+            $servername = 'localhost';
+            $username = 'root';
+            $password = '';
             
             //On établit la connexion
             $conn = mysqli_connect($servername, $username, $password);
@@ -19,7 +19,10 @@
             if(!$conn){
                 die('Erreur : ' .mysqli_connect_error());
             }
-            echo 'Connexion réussie';
+            echo 'Connexion réussie <br>';
+
+            $result = $conn->query("SELECT * FROM user");
+            printf("Select returned %d rows.\n", $result);
         ?>
     </body>
 </html>
