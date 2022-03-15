@@ -81,7 +81,7 @@
             opinion="non";
         }
         $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${opinion}</td><td>${remarques}</td>
-                <td><button class="modifier">Modifier</button><input type="button" value="Supprimer" onclick="suppr(this)"></td>
+                <td><input type="button" value="Modifier" onclick="modif(this)"><input type="button" value="Supprimer" onclick="suppr(this)"></td>
                 <td></td>
             </tr>`);
         }
@@ -90,6 +90,10 @@
             // row.removeChild(row);
             var i = btn.parentNode.parentNode.rowIndex;
             document.getElementById("table").deleteRow(i);
+        }
+        function modif(btn){
+            // change la valeur d'un élément à une position donnée dans un tableau javascript
+            // element.splice(position,valeur) 
         }
     </script>
 </body>
