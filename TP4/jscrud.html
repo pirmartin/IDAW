@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <table class="table">
+    <table id="table">
         <thead>
             <tr>
                 <th scope="col">Nom</th>
@@ -81,9 +81,15 @@
             opinion="non";
         }
         $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${opinion}</td><td>${remarques}</td>
-                <td><button class="modifier">Modifier</button><button class="supprimer">Supprimer</button></td>
+                <td><button class="modifier">Modifier</button><input type="button" value="Supprimer" onclick="suppr(this)"></td>
                 <td></td>
             </tr>`);
+        }
+        function suppr(btn){
+            // var row = btn.parentNode.parentNode;
+            // row.removeChild(row);
+            var i = btn.parentNode.parentNode.rowIndex;
+            document.getElementById("table").deleteRow(i);
         }
     </script>
 </body>
