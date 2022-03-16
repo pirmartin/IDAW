@@ -81,7 +81,11 @@
             opinion="non";
         }
         $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${opinion}</td><td>${remarques}</td>
-                <td><input type="button" value="Modifier" onclick="modif(this)"><input type="button" value="Supprimer" onclick="suppr(this)"></td>
+                <td>
+                    <input type="button" value="Modifier" onclick="modif(this)">
+                    <input type="button" value="Supprimer" onclick="suppr(this)">
+                    <input type="button" value="Sauvegarder" onclick="sauv(this)">
+                </td>
                 <td></td>
             </tr>`);
         }
@@ -89,12 +93,42 @@
             // var row = btn.parentNode.parentNode;
             // row.removeChild(row);
             var i = btn.parentNode.parentNode.rowIndex;
+            // i.parentNode.removeChild(i);
             document.getElementById("table").deleteRow(i);
         }
-        function modif(btn){
-            // change la valeur d'un élément à une position donnée dans un tableau javascript
-            // element.splice(position,valeur) 
+        function modif(btn) {
+            var row = btn.parentNode.parentNode;
+            var personne = row.childNodes;
+
+            var nom = personne[0];
+            var newNom = nom.innerHTML;
+            nom.innerHTML = "<input type='text' value='"+newNom+"'>";
+
+            var prenom = personne[1];
+            var newPrenom = prenom.innerHTML;
+            prenom.innerHTML = "<input type='text' value='"+newPrenom+"'>";
+
+            var birth = personne[2];
+            var newBirth = birth.innerHTML;
+            birth.innerHTML = "<input type='date' value='"+newBirth+"'>";
+
+            var cours = personne[3];
+            var newCours = cours.innerHTML;
+            cours.innerHTML = "<input type='text' placeholder='oui/non' pattern='oui|non' value='"+newCours+"'>";
+
+            var remarques = personne[4];
+            var newRemarques = remarques.innerHTML;
+            remarques.innerHTML = "<input type='text' value='"+newRemarques+"'>";
+        
         }
+
+    function sauv(btn) {
+        var row = btn.parentNode.parentNode;
+        var personne = row.childNodes;
+        for(k=0;k<=4;k++) {
+            personne[k].innerHTML = personne[k].childNodes[0].value;
+        }
+    }
     </script>
 </body>
 </html>
