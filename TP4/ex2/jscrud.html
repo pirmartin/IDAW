@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <title>tabletest</title>
+    <style>
+        body{ margin-top: 5em; }
+        .table {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Date de naissance</th>
+                <th scope="col">Aime le cours Web</th>
+                <th scope="col">Remarques</th>
+                <th scope="col">CRUD</th>
+            </tr>
+        </thead>
+        <tbody id="studentsTableBody">
+        </tbody>
+    </table>
+    <form method ="POST" id="addStudentForm" action="" onsubmit="onFormSubmit();">
+        <div class="form-group row">
+            <label for="inputNom" class="col-sm-2 col-form-label">Nom*</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="inputNom" name="nom" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputPrénom" class="col-sm-2 col-form-label">Prénom</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputPrénom" name="prenom">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputNaissance" class="col-sm-2 col-form-label">Date de naissance</label>
+            <input type="date" class="form-control" id="inputNaissance" name="date_de_naissance">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputCours" class="col-sm-2 col-form-label">Adore le cours</label>
+            <input type="checkbox" class="form-control" id="inputCours" name="aime_le_cours">
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputRemarques" class="col-sm-2 col-form-label">Remarques</label>
+            <input type="text" class="form-control" id="inputRemarques" name="remarque">
+        </div>
+        <br> 
+        <div class="form-group row">
+            <span class="col-sm-2"></span>
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary form-control">Submit</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        function onFormSubmit() {
+        // prevent the form to be sent to the server
+            event.preventDefault();
+            let nom = $("#inputNom").val();
+            let prenom = $("#inputPrénom").val();
+            let date = $("#inputNaissance").val();
+            let remarques = $("#inputRemarques").val();
+            let opinion = $("#inputCours").prop('checked');
+            if(opinion){
+                opinion="oui";
+            }
+            else{
+                opinion="non";
+            }
+            let personne = {nom,prenom,date,opinion,remarques};
+            $.post({
+                url : 'addUser.php',
+                dataType : "json",
+                data : personne,
+                function(res,status){
+                    var date = JSON.parse(res);
+                }
+            })
+            .done(function(){
+                $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${opinion}</td><td>${remarques}</td>
+                    <td>
+                        <input type="button" value="Modifier" onclick="modif(this)">
+                        <input type="button" value="Supprimer" onclick="suppr(this)">
+                        <input type="button" value="Sauvegarder" onclick="sauv(this)">
+                    </td>
+                    <td></td>
+                </tr>`);
+            })
+            .fail(function(){
+                console.log('Erreur');
+            })
+        }
+    function suppr(btn){
+        // var row = btn.parentNode.parentNode;
+        // row.removeChild(row);
+        var i = btn.parentNode.parentNode.rowIndex;
+        // i.parentNode.removeChild(i);
+        document.getElementById("table").deleteRow(i);
+    }
+    function modif(btn) {
+        var row = btn.parentNode.parentNode;
+        var personne = row.childNodes;
+
+        var nom = personne[0];
+        var newNom = nom.innerHTML;
+        nom.innerHTML = "<input type='text' value='"+newNom+"'>";
+
+        var prenom = personne[1];
+        var newPrenom = prenom.innerHTML;
+        prenom.innerHTML = "<input type='text' value='"+newPrenom+"'>";
+
+        var birth = personne[2];
+        var newBirth = birth.innerHTML;
+        birth.innerHTML = "<input type='date' value='"+newBirth+"'>";
+
+        var cours = personne[3];
+        var newCours = cours.innerHTML;
+        cours.innerHTML = "<input type='text' placeholder='oui/non' pattern='oui|non' value='"+newCours+"'>";
+
+        var remarques = personne[4];
+        var newRemarques = remarques.innerHTML;
+        remarques.innerHTML = "<input type='text' value='"+newRemarques+"'>";
+    
+    }
+    function sauv(btn) {
+        var row = btn.parentNode.parentNode;
+        var personne = row.childNodes;
+        for(k=0;k<=4;k++) {
+            personne[k].innerHTML = personne[k].childNodes[0].value;
+        }
+    }
+    </script>
+</body>
+</html>
