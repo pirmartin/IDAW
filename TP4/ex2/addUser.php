@@ -4,7 +4,7 @@ $servername = 'localhost';
             $password = '';
             $database = 'tp4'; 
             //On établit la connexion
-            $conn = mysqli_connect($servername, $username, $password, $base);
+            $conn = mysqli_connect($servername, $username, $password, $database);
 
 if(isset($_POST['nom'])){
     //stockage des valeurs de POST dans des variables
