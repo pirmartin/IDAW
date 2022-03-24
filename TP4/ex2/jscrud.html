@@ -85,9 +85,6 @@
                 url : 'addUser.php',
                 dataType : "json",
                 data : personne,
-                function(res,status){
-                    var date = JSON.parse(res);
-                }
             })
             .done(function(){
                 $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${opinion}</td><td>${remarques}</td>
@@ -104,6 +101,10 @@
             })
         }
     function suppr(btn){
+        $.post({
+            url :'deleteUser.php',
+            dataType : "json"
+        })
         // var row = btn.parentNode.parentNode;
         // row.removeChild(row);
         var i = btn.parentNode.parentNode.rowIndex;
