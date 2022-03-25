@@ -100,34 +100,61 @@
                 console.log('Erreur');
             })
         }
-    function suppr(btn){
-        var row = btn.parentNode.parentNode;
-        let nom = row.children[0].innerHTML;
-        let prenom = row.children[1].innerHTML;
-        let naissance= row.children[2].innerHTML;
-        let aime = row.children[3].innerHTML;
-        let remarques = row.children[4].innerHTML;
-        let personne = {nom,prenom,naissance,aime,remarques};
-        $.post({
-            url :'deleteUser.php',
-            dataType : "json",
-            data : personne
-        })
-        .done(function(){
-            // row.parentNode.removeChild(row);
-            var i = btn.parentNode.parentNode.rowIndex;       
-            document.getElementById("table").deleteRow(i);
-        })
-        .fail(function(){
-            console.log('Erreur lors de la suppression');
-        })
+    // function suppr(btn){
+    //     var row = btn.parentNode.parentNode;
+    //     let nom = row.children[0].innerHTML;
+    //     let prenom = row.children[1].innerHTML;
+    //     let naissance= row.children[2].innerHTML;
+    //     let aime = row.children[3].innerHTML;
+    //     let remarques = row.children[4].innerHTML;
+    //     let personne = {nom,prenom,naissance,aime,remarques};
+    //     $.post({
+    //         url :'deleteUser.php',
+    //         dataType : "json",
+    //         data : personne
+    //     })
+    //     .done(function(){
+    //         // row.parentNode.removeChild(row);
+    //         var i = btn.parentNode.parentNode.rowIndex;       
+    //         document.getElementById("table").deleteRow(i);
+    //     })
+    //     .fail(function(){
+    //         console.log('Erreur lors de la suppression');
+    //     })
         // var row = btn.parentNode.parentNode;
         // row.removeChild(row);
         // i.parentNode.removeChild(i);
         
         // var i = btn.parentNode.parentNode.rowIndex;       
         // document.getElementById("table").deleteRow(i);
-    }
+    //}
+        function suppr(btn) {
+            var row = btn.parentNode.parentNode;
+            let nom = row.children[0].innerHTML;
+            let prenom = row.children[1].innerHTML;
+            let date = row.children[2].innerHTML;
+            let cours = row.children[3].innerHTML;
+            let remarques = row.children[4].innerHTML;
+            let personne = {nom, prenom, date, cours, remarques}; 
+            $.post({
+                url : "deleteUser.php",
+                dataType: "json",
+                data : personne,
+            })
+            .done(function(data){
+                /* console.log('Done'); */
+                // row.parentNode.removeChild(row);
+                console.log(data);
+                var i = btn.parentNode.parentNode.rowIndex;       
+                document.getElementById("table").deleteRow(i);
+            })
+            .fail(function(){
+                console.log('Erreur lors de la suppression');
+                row.parentNode.removeChild(row);
+                /* var i = btn.parentNode.parentNode.rowIndex;       
+                document.getElementById("table").deleteRow(i); */
+            })
+        }
     function modif(btn) {
         var row = btn.parentNode.parentNode;
         var personne = row.childNodes;
