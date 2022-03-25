@@ -101,15 +101,32 @@
             })
         }
     function suppr(btn){
+        var row = btn.parentNode.parentNode;
+        let nom = row.children[0].innerHTML;
+        let prenom = row.children[1].innerHTML;
+        let naissance= row.children[2].innerHTML;
+        let aime = row.children[3].innerHTML;
+        let remarques = row.children[4].innerHTML;
+        let personne = {nom,prenom,naissance,aime,remarques};
         $.post({
             url :'deleteUser.php',
-            dataType : "json"
+            dataType : "json",
+            data : personne
+        })
+        .done(function(){
+            // row.parentNode.removeChild(row);
+            var i = btn.parentNode.parentNode.rowIndex;       
+            document.getElementById("table").deleteRow(i);
+        })
+        .fail(function(){
+            console.log('Erreur lors de la suppression');
         })
         // var row = btn.parentNode.parentNode;
         // row.removeChild(row);
-        var i = btn.parentNode.parentNode.rowIndex;
         // i.parentNode.removeChild(i);
-        document.getElementById("table").deleteRow(i);
+        
+        // var i = btn.parentNode.parentNode.rowIndex;       
+        // document.getElementById("table").deleteRow(i);
     }
     function modif(btn) {
         var row = btn.parentNode.parentNode;
